@@ -100,3 +100,21 @@ scripts/sort_contibutors/contributors_file.*
 
 #optimizations
 .github/scripts/binary_version.txt
+
+# Security Rules Added by GitGuardian Remediation
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+secrets.json
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+*.bak
+*.backup

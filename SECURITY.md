@@ -1,17 +1,22 @@
-# Security Policy
+# Security Guidelines
 
-## Supported Versions
+## Environment Variables
+- Copy .env.example to .env and fill in your actual values
+- NEVER commit .env files to version control
+- Use environment variables for all sensitive configuration
 
-We only provide security updates for the latest version that has been released. See our [Release page](https://github.com/OWASP/wrongsecrets/releases)
-The "support latest only" holds both for WrongSecrets and WrongSecrets-CTF-party.
+## Secrets Management
+- Store API keys, passwords, and tokens in environment variables
+- Use secure secret management services in production
+- Regularly rotate credentials and keys
 
-| Version | Supported          |
-| ------- | ------------------ |
-| latest  | :white_check_mark: |
-| <before | :x:                |
+## Git Security
+- This repository is configured with .gitignore to exclude sensitive files
+- Review all commits before pushing to ensure no secrets are included
+- Use pre-commit hooks to scan for secrets
 
-## Reporting a Vulnerability
-
-Please use Slack to report a vulnerability in the [#project-wrongsecrets](https://owasp.slack.com/archives/C02KQ7D9XHR) channel. You can register for the OWASP Slack [here](https://owasp.org/slack/invite). Given this is a p0wnable app, we do not have any bug bounty or rewards for you ;-).
-
-Given the project is run by volunteers, we intend to respond within a week.
+## Best Practices
+- Follow the principle of least privilege
+- Use strong, unique passwords for each service
+- Enable two-factor authentication where possible
+- Regularly update dependencies and security patches
